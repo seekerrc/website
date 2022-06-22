@@ -1,5 +1,8 @@
 package chap5
 
+/**
+ * word count 案例
+ */
 object Test17_CommonWordCount {
   def main(args: Array[String]): Unit = {
     val stringList: List[String] = List(
@@ -11,9 +14,6 @@ object Test17_CommonWordCount {
     )
 
     // 1. 对字符串进行切分，得到一个打散所有单词的列表
-//    val wordList1: List[Array[String]] = stringList.map(_.split(" "))
-//    val wordList2: List[String] = wordList1.flatten
-//    println(wordList2)
     val wordList = stringList.flatMap(_.split(" "))
     println(wordList)
 
@@ -26,9 +26,8 @@ object Test17_CommonWordCount {
 
     // 4. 将map转换为list，并排序取前3
     val sortList: List[(String, Int)] = countMap.toList
-      .sortWith( _._2 > _._2 )
-      .take(3)
-
+                                                .sortWith( _._2 > _._2 )
+                                                .take(3)
     println(sortList)
   }
 }

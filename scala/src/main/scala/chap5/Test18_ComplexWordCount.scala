@@ -1,5 +1,8 @@
 package chap5
 
+/**
+ * word count 案例
+ */
 object Test18_ComplexWordCount {
   def main(args: Array[String]): Unit = {
     val tupleList: List[(String, Int)] = List(
@@ -26,11 +29,9 @@ object Test18_ComplexWordCount {
       .toList
       .sortBy(_._2)(Ordering[Int].reverse)
       .take(3)
-
     println(wordCountList)
 
     println("================================")
-
     // 思路二：直接基于预统计的结果进行转换
     // 1. 将字符串打散为单词，并结合对应的个数包装成二元组
     val preCountList: List[(String, Int)] = tupleList.flatMap(
