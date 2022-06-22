@@ -1,9 +1,12 @@
 package chap3
 
+/**
+ * 传名参数官网案例
+ * https://docs.scala-lang.org/zh-cn/tour/by-name-parameters.html
+ */
 object Test12_MyWhile {
   def main(args: Array[String]): Unit = {
     var n = 10
-
     // 1. 常规的while循环
     while (n >= 1){
       println(n)
@@ -19,9 +22,8 @@ object Test12_MyWhile {
           myWhile(condition)(op)
         }
       }
-      doLoop _
+      doLoop
     }
-
     println("=================")
     n = 10
     myWhile(n >= 1){
@@ -53,7 +55,6 @@ object Test12_MyWhile {
         myWhile3(condition)(op)
       }
     }
-
     println("=================")
     n = 10
     myWhile3(n >= 1){

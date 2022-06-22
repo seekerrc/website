@@ -1,19 +1,21 @@
 package chap3
 
+/**
+ * 高阶函数简化，柯里化（currying）
+ * 优雅，实在是太优雅了
+ */
 object Test08_Practice {
   def main(args: Array[String]): Unit = {
     // 1. 练习1
     val fun = (i: Int, s: String, c: Char) => {
       if (i == 0 && s == "" && c == '0') false else true
     }
-
     println(fun(0, "", '0'))
     println(fun(0, "", '1'))
     println(fun(23, "", '0'))
     println(fun(0, "hello", '0'))
 
     println("===========================")
-
     // 2. 练习2
     def func(i: Int): String=>(Char=>Boolean) = {
       def f1(s: String): Char=>Boolean = {
@@ -24,7 +26,6 @@ object Test08_Practice {
       }
       f1
     }
-
     println(func(0)("")('0'))
     println(func(0)("")('1'))
     println(func(23)("")('0'))
@@ -34,7 +35,6 @@ object Test08_Practice {
     def func1(i: Int): String=>(Char=>Boolean) = {
       s => c => if (i == 0 && s == "" && c == '0') false else true
     }
-
     println(func1(0)("")('0'))
     println(func1(0)("")('1'))
     println(func1(23)("")('0'))

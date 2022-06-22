@@ -1,5 +1,8 @@
 package chap3
 
+/**
+ * 高阶函数应用在对集合进行统一处理的场景
+ */
 object Test07_Practice_CollectionOperation {
   def main(args: Array[String]): Unit = {
     val arr: Array[Int] = Array(12, 45, 75, 98)
@@ -8,15 +11,12 @@ object Test07_Practice_CollectionOperation {
     def arrayOperation(array: Array[Int], op: Int=>Int): Array[Int] = {
       for (elem <- array) yield op(elem)
     }
-
     // 定义一个加一操作
     def addOne(elem: Int): Int = {
       elem + 1
     }
-
     // 调用函数
     val newArray: Array[Int] = arrayOperation(arr, addOne)
-
     println(newArray.mkString(","))
 
     // 传入匿名函数，实现元素翻倍

@@ -2,6 +2,9 @@ package chap3
 
 import scala.annotation.tailrec
 
+/**
+ * 递归
+ */
 object Test10_Recursion {
   def main(args: Array[String]): Unit = {
     println(fact(5))
@@ -14,7 +17,7 @@ object Test10_Recursion {
     fact(n - 1) * n
   }
 
-  // 尾递归实现
+  // 尾递归实现，避免每次调用都入栈一个函数
   def tailFact(n: Int): Int = {
     @tailrec
     def loop(n: Int, currRes: Int): Int = {

@@ -1,28 +1,28 @@
 package chap3
 
+/**
+ * 函数的嵌套，也叫做高阶函数
+ * 一般指的是将函数作为参数传递的场景
+ */
 object Test06_HighOrderFunction {
   def main(args: Array[String]): Unit = {
     def f(n: Int): Int = {
       println("f调用")
       n + 1
     }
+    // 1. 函数作为值进行传递
+    val f1: Int=>Int = f
+    // 省略类型的写法:
+    val f2 = f _
+    //println(f1)
+    println(f1(12))
+    //println(f2)
+    println(f2(35))
+  
     def fun(): Int = {
       println("fun调用")
       1
     }
-
-    val result: Int = f(123)
-    println(result)
-
-    // 1. 函数作为值进行传递
-    val f1: Int=>Int = f
-    val f2 = f _
-
-    println(f1)
-    println(f1(12))
-    println(f2)
-    println(f2(35))
-
     val f3: ()=>Int = fun
     val f4 = fun _
     println(f3)
@@ -37,7 +37,6 @@ object Test06_HighOrderFunction {
     def add(a: Int, b: Int): Int = {
       a + b
     }
-
     println(dualEval(add, 12, 35))
     println(dualEval((a, b) => a + b, 12, 35))
     println(dualEval(_ + _, 12, 35))
@@ -49,11 +48,9 @@ object Test06_HighOrderFunction {
       }
       f6    // 将函数直接返回
     }
-
 //    val f6 = f5()
 //    println(f6)
 //    println(f6(25))
-
     println(f5()(25))
   }
 }

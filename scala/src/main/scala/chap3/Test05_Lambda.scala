@@ -1,5 +1,8 @@
 package chap3
 
+/**
+ * lambda 表达式
+ */
 object Test05_Lambda {
   def main(args: Array[String]): Unit = {
     val fun = (name: String) => {
@@ -8,19 +11,16 @@ object Test05_Lambda {
     fun("atguigu")
 
     println("========================")
-
     // 定义一个函数，以函数作为参数输入
     def f(func: String => Unit): Unit = {
       func("atguigu")
     }
-
     f(fun)
     f((name: String) => {
       println(name)
     })
 
     println("========================")
-
     // 匿名函数的简化原则
     //    （1）参数的类型可以省略，会根据形参进行自动的推导
     f((name) => {
@@ -41,8 +41,7 @@ object Test05_Lambda {
     //     (5) 如果可以推断出，当前传入的println是一个函数体，而不是调用语句，可以直接省略下划线
     f( println )
 
-    println("=========================")
-
+    println("============应用=============")
     // 实际示例，定义一个”二元运算“函数，只操作1和2两个数，但是具体运算通过参数传入
     def dualFunctionOneAndTwo(fun: (Int, Int)=>Int): Int = {
       fun(1, 2)
