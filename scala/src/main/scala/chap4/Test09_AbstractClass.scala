@@ -1,17 +1,21 @@
 package chap4
 
+/**
+ * 抽象类，子类需要override
+ */
 object Test09_AbstractClass {
   def main(args: Array[String]): Unit = {
     val student = new Student9
     student.eat()
     student.sleep()
+    println(student.name)
   }
 }
 
 // 定义抽象类
 abstract class Person9{
   // 非抽象属性
-  var name: String = "person"
+  val name: String = "person"
 
   // 抽象属性
   var age: Int
@@ -35,8 +39,7 @@ class Student9 extends Person9 {
   }
 
   // 重写非抽象属性和方法
-//  override val name: String = "student"
-  name = "student"
+  override val name: String = "student"
 
   override def eat(): Unit = {
     super.eat()

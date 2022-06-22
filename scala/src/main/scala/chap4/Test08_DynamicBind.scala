@@ -1,5 +1,8 @@
 package chap4
 
+/**
+ * scala多态适用范围：方法和成员变量
+ */
 object Test08_DynamicBind {
   def main(args: Array[String]): Unit = {
     val student: Person8 = new Student8

@@ -1,22 +1,24 @@
 package chap4
 
+/**
+ * 多态 polymorphism
+ * subclass overrides superclass method
+ */
 object Test07_Inherit {
   def main(args: Array[String]): Unit = {
     val student1: Student7 = new Student7("alice", 18)
-    val student2 = new Student7("bob", 20, "std001")
-
     student1.printInfo()
+    println("=========================")
+    val student2 = new Student7("bob", 20, "std001")
     student2.printInfo()
-
+    println("=========================")
     val teacher = new Teacher
     teacher.printInfo()
 
+    println("=========================")
     def personInfo(person: Person7): Unit = {
       person.printInfo()
     }
-
-    println("=========================")
-
     val person = new Person7
     personInfo(student1)
     personInfo(teacher)
@@ -28,7 +30,6 @@ object Test07_Inherit {
 class Person7() {
   var name: String = _
   var age: Int = _
-
   println("1. 父类的主构造器调用")
 
   def this(name: String, age: Int){
@@ -46,7 +47,6 @@ class Person7() {
 // 定义子类
 class Student7(name: String, age: Int) extends Person7(name, age) {
   var stdNo: String = _
-
   println("3. 子类的主构造器调用")
 
   def this(name: String, age: Int, stdNo: String){
