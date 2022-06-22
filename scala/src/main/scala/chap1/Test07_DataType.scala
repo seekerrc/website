@@ -1,5 +1,8 @@
-package main.scala.chap1
+package chap1
 
+/**
+ * 基本数据类型
+ */
 object Test07_DataType {
     def main(args: Array[String]): Unit = {
         // 1. 整数类型

@@ -1,8 +1,11 @@
-package main.scala.chap1
+package chap1
 
 import java.io.{File, PrintWriter}
 import scala.io.Source
 
+/**
+ * 文件读写
+ */
 object Test06_FileIO {
     def main(args: Array[String]): Unit = {
         // 1. 从文件中读取数据

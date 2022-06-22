@@ -1,4 +1,4 @@
-package main.scala.chap1
+package chap1
 
 /**
  * 变量

@@ -1,7 +1,10 @@
-package main.scala.chap1
+package chap1
 
 import scala.io.StdIn
 
+/**
+ * 标准输入输出
+ */
 object Test05_StdIn {
     def main(args: Array[String]): Unit = {
         // 输入信息

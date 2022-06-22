@@ -1,4 +1,4 @@
-package main.scala.chap1
+package chap1
 
 /*
    object: 关键字，声明一个单例对象（伴生对象）
