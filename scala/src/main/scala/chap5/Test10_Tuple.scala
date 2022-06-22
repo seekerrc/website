@@ -1,5 +1,10 @@
 package chap5
 
+/**
+ * tuple
+ * 元组是一个可以容纳不同类型元素的类。 元组是不可变的。
+ * 当我们需要从函数返回多个值时，元组会派上用场。
+ */
 object Test10_Tuple {
   def main(args: Array[String]): Unit = {
     // 1. 创建元组
@@ -11,7 +16,6 @@ object Test10_Tuple {
     println(tuple._2)
     println(tuple._3)
     println(tuple._4)
-
     println(tuple.productElement(1))
 
     println("====================")

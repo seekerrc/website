@@ -1,5 +1,8 @@
 package chap5
 
+/**
+ * 集合常用api
+ */
 object Test11_CommonOp {
   def main(args: Array[String]): Unit = {
     val list = List(1,3,5,7,2,89)

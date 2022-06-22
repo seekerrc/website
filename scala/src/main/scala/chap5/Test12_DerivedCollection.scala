@@ -1,5 +1,8 @@
 package chap5
 
+/**
+ * 集合常用api
+ */
 object Test12_DerivedCollection {
   def main(args: Array[String]): Unit = {
     val list1 = List(1,3,5,7,2,89)

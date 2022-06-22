@@ -1,5 +1,9 @@
 package chap5
 
+/**
+ * List[T]
+ * immutable
+ */
 object Test04_List {
   def main(args: Array[String]): Unit = {
     // 1. 创建一个List
@@ -19,24 +23,20 @@ object Test04_List {
     println(list3)
 
     println("==================")
-
     val list4 = list2.::(51)
     println(list4)
-
     val list5 = Nil.::(13)
     println(list5)
-
     val list6 = 73 :: 32 :: Nil
     val list7 = 17 :: 28 :: 59 :: 16 :: Nil
     println(list7)
 
     // 4. 合并列表
     val list8 = list6 :: list7
-    println(list8)
-
+    println("list8: " + list8)
+    // the right way
     val list9 = list6 ::: list7
     println(list9)
-
     val list10 = list6 ++ list7
     println(list10)
 

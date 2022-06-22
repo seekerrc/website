@@ -1,17 +1,14 @@
 package chap5
 
+/**
+ * 集合常用api
+ */
 object Test13_SimpleFunction {
   def main(args: Array[String]): Unit = {
     val list = List(5,1,8,2,-3,4)
     val list2 = List(("a", 5), ("b", 1), ("c", 8), ("d", 2), ("e", -3), ("f", 4))
 
     //    （1）求和
-    var sum = 0
-    for (elem <- list){
-      sum += elem
-    }
-    println(sum)
-
     println(list.sum)
 
     //    （2）求乘积
@@ -27,17 +24,15 @@ object Test13_SimpleFunction {
     println(list2.minBy(_._2))
 
     println("========================")
-
     //    （5）排序
     // 5.1 sorted
     val sortedList = list.sorted
     println(sortedList)
-
     // 从大到小逆序排序
     println(list.sorted.reverse)
     // 传入隐式参数
     println(list.sorted(Ordering[Int].reverse))
-
+    
     println(list2.sorted)
 
     // 5.2 sortBy

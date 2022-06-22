@@ -1,5 +1,9 @@
 package chap5
 
+/**
+ * Set[T]
+ * immutable
+ */
 object Test06_ImmutableSet {
   def main(args: Array[String]): Unit = {
     // 1. 创建set
@@ -7,13 +11,12 @@ object Test06_ImmutableSet {
     println(set1)
 
     println("==================")
-
     // 2. 添加元素
     val set2 = set1 + 129
     println(set1)
     println(set2)
+    
     println("==================")
-
     // 3. 合并set
     val set3 = Set(19, 13, 23, 53, 67, 99)
     val set4 = set2 ++ set3

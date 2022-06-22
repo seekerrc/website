@@ -1,5 +1,9 @@
 package chap5
 
+/**
+ * Map[K, V]
+ * immutable, 只能查询
+ */
 object Test08_ImmutableMap {
   def main(args: Array[String]): Unit = {
     // 1. 创建map
@@ -10,10 +14,9 @@ object Test08_ImmutableMap {
     println("==========================")
     // 2. 遍历元素
     map1.foreach(println)
-    map1.foreach( (kv: (String, Int)) => println(kv) )
+    //map1.foreach( (kv: (String, Int)) => println(kv) )
 
     println("============================")
-
     // 3. 取map中所有的key 或者 value
     for (key <- map1.keys){
       println(s"$key ---> ${map1.get(key)}")
@@ -23,7 +26,7 @@ object Test08_ImmutableMap {
     println("a: " + map1.get("a").get)
     println("c: " + map1.get("c"))
     println("c: " + map1.getOrElse("c", 0))
-
+    // 简写
     println(map1("a"))
   }
 }

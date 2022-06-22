@@ -3,12 +3,15 @@ package chap5
 import scala.collection.mutable
 import scala.collection.mutable.ArrayBuffer
 
+/**
+ * ArrayBuffer[T]
+ * mutable
+ */
 object Test02_ArrayBuffer {
   def main(args: Array[String]): Unit = {
     // 1. 创建可变数组
     val arr1: ArrayBuffer[Int] = new ArrayBuffer[Int]()
     val arr2 = ArrayBuffer(23, 57, 92)
-
     println(arr1)
     println(arr2)
 
@@ -24,35 +27,31 @@ object Test02_ArrayBuffer {
     println(arr1)
     println(newArr1)
     println(arr1 == newArr1)
-
+    // append
     val newArr2 = arr1 += 19
     println(arr1)
     println(newArr2)
     println(arr1 == newArr2)
     newArr2 += 13
     println(arr1)
-
+    // prepend
     77 +=: arr1
     println(arr1)
     println(newArr2)
-
+    // recommend:
     arr1.append(36)
     arr1.prepend(11, 76)
     arr1.insert(1, 13, 59)
     println(arr1)
-
     arr1.insertAll(2, newArr1)
     arr1.prependAll(newArr2)
-
     println(arr1)
 
     // 4. 删除元素
     arr1.remove(3)
     println(arr1)
-
     arr1.remove(0, 10)
     println(arr1)
-
     arr1 -= 13
     println(arr1)
 
