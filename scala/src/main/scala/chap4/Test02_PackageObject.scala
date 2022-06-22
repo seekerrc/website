@@ -1,13 +1,7 @@
-//package chapter06
-//
-//object Test02_PackageObject {
-//  def main(args: Array[String]): Unit = {
-//    commonMethod()
-//    println(commonValue)
-//  }
-//}
-
-package chapter06{
+/**
+ * 包对象，全包共享
+ */
+package chap4{
   object Test02_PackageObject {
     def main(args: Array[String]): Unit = {
       commonMethod()

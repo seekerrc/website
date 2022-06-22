@@ -2,6 +2,9 @@ package chap4
 
 import scala.beans.BeanProperty
 
+/**
+ * 面向对象之封装
+ */
 object Test03_Class {
   def main(args: Array[String]): Unit = {
     // 创建一个对象
