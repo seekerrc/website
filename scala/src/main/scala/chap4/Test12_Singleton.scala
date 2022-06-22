@@ -1,10 +1,12 @@
 package chap4
 
+/**
+ * 单例模式
+ */
 object Test12_Singleton {
   def main(args: Array[String]): Unit = {
     val student1 = Student12.getInstance()
     student1.printInfo()
-
     val student2 = Student12.getInstance()
     student2.printInfo()
 

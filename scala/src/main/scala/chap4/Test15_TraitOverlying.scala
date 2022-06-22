@@ -1,5 +1,9 @@
 package chap4
 
+/**
+ * 多继承的菱形问题，父类采用override可以同时继承，顺序为right to left
+ * 打个断点即可以看到
+ */
 object Test15_TraitOverlying {
   def main(args: Array[String]): Unit = {
     val student = new Student15
@@ -30,7 +34,8 @@ trait CategoryBall extends Ball {
 
 // 定义一个自定义球的类
 class MyFootBall extends CategoryBall with ColorBall {
-  override def describe(): String = "my ball is a " + super[CategoryBall].describe()
+  //override def describe(): String = "my ball is a " + super[CategoryBall].describe()
+  override def describe(): String = "my ball is a " + super.describe()
 }
 
 trait Knowledge15 {

@@ -1,14 +1,19 @@
 package chap4
 
+/**
+ * 当某个特质被用于组合类时，被称为混入Mixin
+ * class D extends B with C
+ * 类D有一个父类B和一个混入C。
+ * 一个类只能有一个父类但是可以有多个混入（分别使用关键字extends和with）。
+ * 混入和某个父类可能有相同的父类。
+ */
 object Test14_TraitMixin {
   def main(args: Array[String]): Unit = {
     val student = new Student14
     student.study()
     student.increase()
-
     student.play()
     student.increase()
-
     student.dating()
     student.increase()
 

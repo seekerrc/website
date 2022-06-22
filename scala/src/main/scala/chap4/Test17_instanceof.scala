@@ -1,5 +1,11 @@
 package chap4
 
+/**
+ * 类别判断
+ * isInstanceOf[]
+ * asInstanceOf[]
+ * classOf[]
+ */
 object Test17_Extends {
   def main(args: Array[String]): Unit = {
     // 1. 类型的检测和转换
@@ -25,9 +31,6 @@ object Test17_Extends {
     }
 
     println(classOf[Student17])
-
-    // 2. 测试枚举类
-    println(WorkDay.MONDAY)
   }
 }
 
@@ -44,19 +47,4 @@ class Student17(name: String, age: Int) extends Person17(name, age){
   def study(): Unit = {
     println("student study")
   }
-}
-
-// 定义枚举类对象
-object WorkDay extends Enumeration {
-  val MONDAY = Value(1, "Monday")
-  val TUESDAY = Value(2, "TuesDay")
-}
-
-// 定义应用类对象
-object TestApp extends App {
-  println("app start")
-
-  type MyString = String
-  val a: MyString = "abc"
-  println(a)
 }

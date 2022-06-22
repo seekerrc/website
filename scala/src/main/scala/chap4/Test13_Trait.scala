@@ -1,5 +1,11 @@
 package chap4
 
+/**
+ * 特质 (Traits) 用于在类 (Class)之间共享程序接口 (Interface)和字段 (Fields)。
+ * 它们类似于Java 8的接口。
+ * 类和对象 (Objects)可以extends特质
+ * 但是特质本身不能被实例化，因此特质没有参数。
+ */
 object Test13_Trait {
   def main(args: Array[String]): Unit = {
     val student: Student13 = new Student13
@@ -7,6 +13,7 @@ object Test13_Trait {
     student.study()
     student.dating()
     student.play()
+    println(student.age)
   }
 }
 
