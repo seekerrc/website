@@ -1,15 +1,17 @@
 package chap6
 
+/**
+ * 案例类（case classes）的匹配
+ * 案例类非常适合用于模式匹配。
+ */
 object Test04_MatchObject {
   def main(args: Array[String]): Unit = {
-    val student = new Student("alice", 19)
-
+    val student = Student("alice", 18)
     // 针对对象实例的内容进行匹配
     val result = student match {
       case Student("alice", 18) => "Alice, 18"
       case _ => "Else"
     }
-
     println(result)
   }
 }

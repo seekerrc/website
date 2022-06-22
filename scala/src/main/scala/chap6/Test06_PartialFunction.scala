@@ -1,5 +1,13 @@
 package chap6
 
+/**
+ * 偏函数：只能处理一部分数值的函数
+ * A partial function is a function that does not provide an answer
+ * for every possible input value it can be given.
+ * It provides an answer only for a subset of possible data,
+ * and defines the data it can handle.
+ * https://www.oreilly.com/library/view/scala-cookbook/9781449340292/ch09s09.html
+ */
 object Test06_PartialFunction {
   def main(args: Array[String]): Unit = {
     val list: List[(String, Int)] = List(("a", 12), ("b", 35), ("c", 27), ("a", 13))
@@ -38,7 +46,6 @@ object Test06_PartialFunction {
     }
 
     def abs(x: Int): Int = (positiveAbs orElse negativeAbs orElse zeroAbs) (x)
-
     println(abs(-67))
     println(abs(35))
     println(abs(0))
