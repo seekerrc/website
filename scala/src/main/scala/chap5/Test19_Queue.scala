@@ -4,7 +4,7 @@ import scala.collection.immutable.Queue
 import scala.collection.mutable
 
 /**
- * mutable.Queue 队列
+ * mutable.Queue[T] 队列
  */
 object Test19_Queue {
   def main(args: Array[String]): Unit = {
