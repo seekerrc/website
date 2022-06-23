@@ -101,4 +101,4 @@ fabric.properties
 *.log
 
 target
-.idea
+#.idea
